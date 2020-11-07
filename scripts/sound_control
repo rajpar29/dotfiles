@@ -1,0 +1,12 @@
+
+if [ "$1" == "up" ];
+then
+    pulsemixer --change-volume +5
+elif [ "$1" == "down" ];
+then
+    pulsemixer --change-volume -5
+fi
+
+volume=`pulsemixer --get-volume`
+volume=`awk '{print $1}' <<< $volume`
+dunstify -a "Volume" "$volume" -r 23423 -i "audio-volume-high-symbolic.symbolic"

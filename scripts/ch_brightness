@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [ "$1" == "up" ];
+then
+    light -A 5
+elif [ "$1" == "down" ];
+then
+    light -U 5
+fi
+    brightness=`light`
+    brightness=`awk -F . '{print $1}' <<< $brightness`
+    dunstify -a "Brightness" "$brightness" -r 23423 -i "display-brightness-symbolic.symbolic"

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+
+xdotool key --clearmodifiers a
+echo "hello"

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+path="/home/cipher/scripts/"
+
+scriptList=`ls $path`
+optionChoosen=$(echo "$scriptList" | rofi -dmenu -i)
+echo $optionChoosen
+$path/$optionChoosen

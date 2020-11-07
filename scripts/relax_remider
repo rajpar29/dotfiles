@@ -1,0 +1,36 @@
+#!/bin/sh
+
+#XDG_RUNTIME_DIR=/run/user/$(id -u) /usr/bin/notify-send "Blink your eyes"\
+
+get_filename(){
+    FILENAME=$(ls -a /tmp/ | grep relax_cache)
+}
+
+path="/tmp/relax_cache.XXXX"
+old_cache=`ls -a /tmp/ | grep relax_cache | wc -l`
+
+if [ $old_cache == 1 ]; then
+    #echo "File exists"
+    get_filename
+    #echo $FILENAME
+    db_count=`cat /tmp/$FILENAME`
+    #echo $db_count
+else
+    mktemp $path
+    get_filename
+    echo "0" > /tmp/$FILENAME
+    db_count=0
+fi
+
+if [ $db_count == 2 ]; then
+    message="Take walk"
+    #XDG_RUNTIME_DIR=/run/user/$(id -u) /usr/bin/dunstify -a "Relaaaxx" "Take Walk" -i "face-cool-symbolic.symbolic"
+    db_count=0
+else
+    message="Blink eyes"
+    db_count=$(($db_count+1))
+fi
+#echo $message 
+    XDG_RUNTIME_DIR=/run/user/$(id -u) /usr/bin/dunstify -a "Relaaaxx" "$message" -i "face-cool-symbolic.symbolic"
+
+echo $db_count > /tmp/$FILENAME

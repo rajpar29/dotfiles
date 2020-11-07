@@ -1,0 +1,15 @@
+#! /bin/sh
+
+export DISPLAY=:0
+
+# filename=`ls ~/Pictures/wallpapers | shuf -n 1`
+filename=arch.jpg
+
+#wal -i ~/Pictures/wallpapers/$filename 
+#DISPLAY=:0 feh --bg-scale ~/Pictures/wallpapers/$filename 
+nitrogen --restore
+
+wal -f random_dark
+
+betterlockscreen -u ~/Pictures/wallpapers/$filename
+XDG_RUNTIME_DIR=/run/user/$(id -u) /usr/bin/dunstify -a "Wallpaper Changed" ""

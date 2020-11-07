@@ -1,0 +1,25 @@
+# Import DISPLAY variable 
+systemctl --user import-environment DISPLAY
+
+# Nvidia driver
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
+
+
+# SWAP esc caps
+setxkbmap -option "caps:swapescape"
+
+# Set hjkl as arrows
+#xmodmap ~/.xmodmap/hjkl_arrow
+
+# Enable tap
+/bin/bash /home/cipher/scripts/enable_tap
+
+# Decrease key repeat delay
+xset r rate 300 50
+
+# Set Wallpaper
+#ch_wall
+#nitrogen &
+#Mount Drives
+#automount

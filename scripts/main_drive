@@ -1,0 +1,29 @@
+#!/bin/sh
+
+path="/media/main"
+
+openRofi() {
+    # dirs=`find $path -maxdepth 1 -type d -printf "%f\n"`
+    # echo "$dirs"
+    folderList=$({
+        echo "open"
+        ls -d $path/*/ | awk -F / '{print $(NF-1)}'
+        # echo "back"
+        echo "exit"
+    })
+    optionChoosen=$(echo "$folderList" | rofi -dmenu -i)
+    if [ $optionChoosen == "exit" ] || [ -z "$optionChoosen"]; then
+        exit 0
+    # elif [ "$optionChoosen" == "back" ]; then
+        # path=`echo "$path" | awk -F / 'NF{NF--};1'`
+        # echo "$path"
+    elif [ $optionChoosen == "open" ]; then
+        nautilus $path
+        exit 0
+    else
+        path="${path}/$optionChoosen"
+        openRofi
+    fi
+}
+openRofi
+echo $optionChoosen
