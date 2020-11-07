@@ -1,0 +1,21 @@
+alt + w 
+	~/scripts/ch_wall
+shift + F7
+	~/scripts/ch_brightness down
+shift + F8
+	~/scripts/ch_brightness up
+
+ctrl + shift + Up 
+	~/scripts/sound_control up
+ctrl + shift + Down 
+	~/scripts/sound_control down
+super  + s
+	~/scripts/run_script
+#alt + h
+#	~/scripts/arrow
+#alt + j
+#	xdotool key Down
+#alt + k
+#	xdotool key Up
+#alt + l
+#	xdotool key Right
