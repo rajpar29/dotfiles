@@ -1,0 +1,85 @@
+{
+    "window.zoomLevel": 0,
+    "workbench.sideBar.location": "right",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.mouseWheelZoom": true,
+    "workbench.colorCustomizations": {
+        "editorLineNumber.foreground": "#F9D71C",
+    },
+    "editor.renderWhitespace": "none",
+    "editor.fontSize": 18,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.languageServer": "Microsoft",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    },
+    "terminal.integrated.shell.linux": "/bin/zsh",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "vim.leader": "<space>",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        },
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+           "before": ["<space>", "f", "s"],
+            "after": [],
+            "commands": [
+                { "command": "workbench.action.files.save", "args": [] }
+            ]
+        }
+    ],
+    "vim.handleKeys": {
+        "<C-w>": false,
+        "<C-b>": false,
+        "<C-f>": false,
+        "<C-h>": false
+    },
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "java.semanticHighlighting.enabled": true,
+    "[scss]": {
+        "editor.defaultFormatter": "lonefy.vscode-JS-CSS-HTML-formatter"
+    },
+    "javascript.implicitProjectConfig.experimentalDecorators": true,
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.fontSize": 17,
+    "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', FontAwesome",
+    "github.gitAuthentication": false,
+    "workbench.activityBar.visible": true,
+    "editor.lineNumbers": "relative",
+    "zenMode.hideLineNumbers": false,
+    "editor.renderLineHighlight": "all",
+    "vim.camelCaseMotion.enable": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "window.menuBarVisibility": "toggle",
+    "dart.debugExternalLibraries": false,
+    "dart.debugSdkLibraries": false,
+    "dart.enableSdkFormatter": false
+}
